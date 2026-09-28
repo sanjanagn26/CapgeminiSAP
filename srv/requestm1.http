@@ -1,0 +1,282 @@
+### CREATE DEPARTMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/createDepartment
+Content-Type: application/json
+
+{
+    "department_id": 10,
+    "department_name": "Engineering",
+    "manager_id": 1
+}
+
+### READ DEPARTMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/readDepartment
+Content-Type: application/json
+
+{
+    "department_id": 10
+}
+
+### UPDATE DEPARTMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateDepartment
+Content-Type: application/json
+
+{
+    "department_id": 10,
+    "department_name": "Software Engineering"
+}
+
+### DELETE DEPARTMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteDepartment
+Content-Type: application/json
+
+{
+    "department_id": 10
+}
+
+### CREATE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/catalog-service3/createEmployee
+Content-Type: application/json
+
+{
+    "employee_id": 1,
+    "first_name": "Alice",
+    "last_name": "Smith",
+    "email": "alice@company.com",
+    "hire_date": "2024-01-15",
+    "Department_department_id": 10
+}
+
+### READ EMPLOYEE
+
+POST http://localhost:4004/odata/v4/catalog-service3/readEmployee
+Content-Type: application/json
+
+{
+    "employee_id": 1
+}
+
+### UPDATE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateEmployee
+Content-Type: application/json
+
+{
+    "employee_id": 1,
+    "email": "alice.updated@company.com"
+}
+
+### DELETE EMPLOYEE
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteEmployee
+Content-Type: application/json
+
+{
+    "employee_id": 1
+}
+
+### CREATE PROJECT
+
+POST http://localhost:4004/odata/v4/catalog-service3/createProject
+Content-Type: application/json
+
+{
+    "project_id": 101,
+    "project_name": "Alpha Launch",
+    "start_date": "2026-01-10",
+    "budget": 50000
+}
+
+### READ PROJECT
+
+POST http://localhost:4004/odata/v4/catalog-service3/readProject
+Content-Type: application/json
+
+{
+    "project_id": 101
+}
+
+### UPDATE PROJECT
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateProject
+Content-Type: application/json
+
+{
+    "project_id": 101,
+    "budget": 60000
+}
+
+### DELETE PROJECT
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteProject
+Content-Type: application/json
+
+{
+    "project_id": 101
+}
+
+### CREATE PROJECT ASSIGNMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/createProjectAssignment
+Content-Type: application/json
+
+{
+    "assignment_id": 501,
+    "Employee_employee_id": 1,
+    "Project_project_id": 101,
+    "role": "Lead Developer",
+    "hours_per_week": 40
+}
+
+### READ PROJECT ASSIGNMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/readProjectAssignment
+Content-Type: application/json
+
+{
+    "assignment_id": 501
+}
+
+### UPDATE PROJECT ASSIGNMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateProjectAssignment
+Content-Type: application/json
+
+{
+    "assignment_id": 501,
+    "hours_per_week": 45
+}
+
+### DELETE PROJECT ASSIGNMENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteProjectAssignment
+Content-Type: application/json
+
+{
+    "assignment_id": 501
+}
+
+### CREATE CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/createClient
+Content-Type: application/json
+
+{
+    "client_id": 401,
+    "client_name": "Acme Corp",
+    "contact_email": "billing@acme.com"
+}
+
+### READ CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/readClient
+Content-Type: application/json
+
+{
+    "client_id": 401
+}
+
+### UPDATE CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateClient
+Content-Type: application/json
+
+{
+    "client_id": 401,
+    "contact_email": "accounts@acme.com"
+}
+
+### DELETE CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteClient
+Content-Type: application/json
+
+{
+    "client_id": 401
+}
+
+### CREATE PROJECT CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/createProjectClient
+Content-Type: application/json
+
+{
+    "Project_project_id": 101,
+    "Client_client_id": 401
+}
+
+### READ PROJECT CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/readProjectClient
+Content-Type: application/json
+
+{
+    "Project_project_id": 101,
+    "Client_client_id": 401
+}
+
+### UPDATE PROJECT CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateProjectClient
+Content-Type: application/json
+
+{
+    "Project_project_id": 101,
+    "Client_client_id": 401,
+    "New_Client_client_id": 402
+}
+
+### DELETE PROJECT CLIENT
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteProjectClient
+Content-Type: application/json
+
+{
+    "Project_project_id": 101,
+    "Client_client_id": 402
+}
+
+### CREATE TIMESHEET
+
+POST http://localhost:4004/odata/v4/catalog-service3/createTimesheet
+Content-Type: application/json
+
+{
+    "timesheet_id": 901,
+    "Employee_employee_id": 1,
+    "Project_project_id": 101,
+    "date": "2026-09-15",
+    "hours_logged": 8
+}
+
+### READ TIMESHEET
+
+POST http://localhost:4004/odata/v4/catalog-service3/readTimesheet
+Content-Type: application/json
+
+{
+    "timesheet_id": 901
+}
+
+### UPDATE TIMESHEET
+
+POST http://localhost:4004/odata/v4/catalog-service3/updateTimesheet
+Content-Type: application/json
+
+{
+    "timesheet_id": 901,
+    "hours_logged": 9
+}
+
+### DELETE TIMESHEET
+
+POST http://localhost:4004/odata/v4/catalog-service3/deleteTimesheet
+Content-Type: application/json
+
+{
+    "timesheet_id": 901
+}

@@ -1,0 +1,166 @@
+### 
+http://localhost:4004/odata/v4/catalog/AddressSrv
+
+###
+http://localhost:4004/odata/v4/catalog/EmployeeSrv
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json
+
+    {
+        "Currency_code": "USD",
+        "ID": "8f1d5b9a-4d7f-4e29-84b6-987654321abc",
+        "accountNumber": null,
+        "bankId": null,
+        "bankName": null,
+        "email": null,
+        "gender": "F",
+        "language": "E",
+        "loginName": "GNSN",
+        "nameFirst": "Sanjana",
+        "nameInitials": null,
+        "nameLast": "GN",
+        "nameMiddle": null,
+        "phoneNumber": "(+1) 9898989898",
+        "salaryAmount": 45000.00
+    }
+
+# POST http://localhost:4004/odata/v4/catalog/createAddress
+# Content-Type: application/json
+
+# {
+#     "NODE_KEY": "ADDR1005",
+#     "ADDRESS_TYPE": "HOME",
+#     "VAL_START": "2026-01-01",
+#     "VAL_END": "2027-01-01",
+#     "LATITUDE": 12.9716,
+#     "LONGITUDE": 77.5946,
+#     "STREET": "MG Road",
+#     "POSTAL_CODE": "560001",
+#     "CITY": "Bangalore",
+#     "COUNTRY": "IN",
+#     "BUILDING": "BlockB"
+# }
+
+###
+POST http://localhost:4004/odata/v4/catalog/updateEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40a2",
+    "salaryAmount": "50000.00",
+    "Currency_code": "USD"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/createProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY": "PROD1001",
+    "PRODUCT_ID": "P1001",
+    "TYPE_CODE": "FG",
+    "CATEGORY": "Electronics",
+    "DESCRIPTION": "Laptop",
+    "TAX_TARIF_CODE": 18,
+    "MEASURE_UNIT": "EA",
+    "WEIGHT_MEASURE": 2.50,
+    "WEIGHT_UNIT": "KG",
+    "PRICE": 65000.00,
+    "CURRENCY_CODE": "USD",
+    "WIDTH": 35.00,
+    "DEPTH": 25.00,
+    "HEIGHT": 2.00,
+    "DIM_UNIT": "CM"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/updateProduct
+Content-Type: application/json
+
+{
+    "NODE_KEY": "PROD1001",
+    "PRICE": 75000.00
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID": "2a5776ec-e711-4c11-a92a-2da5b46c40a4"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197C7FB
+Content-Type: application/json
+
+{
+    "salaryAmount": "105000.00",
+    "Currency_code": "USD"
+}
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHighestSalariedEmployees()
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHighestPricedProduct()
+
+###
+POST http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC28052/discountPrice
+ 
+###
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC28052/largestOrder()
+ 
+###
+POST http://localhost:4004/odata/v4/catalog/ProductSrv/74867AD200E41EDBA5D8B06B26EB4052/increasePrice
+ 
+###
+GET http://localhost:4004/odata/v4/catalog/ProductSrv/44444444-4444-4444-4444-444444444444/top20Products
+
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/increaseSalary
+ 
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/top20HighestPaidEmployee()
+
+###
+GET http://localhost:4004/odata/v4/catalog/getUtilities()
+
+###
+# http://localhost:4004/odata/v4/catalog/EmployeeSrv
+# Content-Type: application/json
+
+# {
+#     "Currency_code": "USD",
+#     "ID": "2a5776ec-e711-4c11-a92a-2da5b46c11b8",
+#     "accountNumber": null,
+#     "bankId": null,
+#     "bankName": null,
+#     "email": null,
+#     "gender": "M",
+#     "language": "E",
+#     "loginName": "RAMAM",
+#     "nameFirst": "Rama",
+#     "nameInitials": null,
+#     "nameLast": "Murthy",
+#     "nameMiddle": null,
+#     "phoneNumber": "(+1) 9898989898",
+#     "salaryAmount": "45000.00"
+# }
+ 
+
+###
+# PUT http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/
+# Content-Type: application/json
+
+# {
+#     "GROSS_AMOUNT": 16000,
+#     "CURRENCY": "USD"
+# }
+

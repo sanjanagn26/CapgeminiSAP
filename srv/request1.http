@@ -1,0 +1,109 @@
+###
+http://localhost:4004/odata/v4/catalog-service1/BookSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/AuthorSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/PublisherSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/CustomerSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/ShoppingBasketSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/ShoppingBasketBookSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/WarehouseSrv
+
+###
+http://localhost:4004/odata/v4/catalog-service1/WarehouseBookSrv
+
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createBook
+Content-Type: application/json
+
+{
+    "Publisher_Name" : "Sanjana",
+    "Author_Name" : "Anvi",
+    "Author_Address" : "Bangalore",
+    "ISBN" : "DeathlyH",
+    "Title" : "Myth",
+    "Year" : 2005,
+    "Price" : 1199.00
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createAuthor
+Content-Type: application/json
+
+{
+    "Name" : "Anvi",
+    "Address" : "Bangalore",
+    "URL" : "www.sanju.com"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createPublisher
+Content-Type: application/json
+
+{
+    "Name" : "GNSN",
+    "Address" : "Germany",
+    "Phone" : "9876543210",
+    "URL" : "www.sappress.com"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createCustomer
+Content-Type: application/json
+
+{
+    "Email" : "sanjana@gmail.com",
+    "Name" : "Sanju",
+    "Phone" : "9111111118",
+    "Address" : "Bangalore"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createShoppingBasket
+Content-Type: application/json
+
+{
+    "ID" : 103,
+    "Customer_Email" : "sanjuuu@gmail.com"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createShoppingBasketBook
+Content-Type: application/json
+
+{
+    "ShoppingBasket_ID" : 103,
+    "Book_ISBN": "DeathlyH",
+    "Count" : 2
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createWarehouse
+Content-Type: application/json
+
+{
+    "Code" : 502,
+    "Phone" : "8888888888",
+    "Address" : "Mumbai"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog-service1/createWarehouseBook
+Content-Type: application/json
+
+{
+    "Warehouse_Code" : 502,
+    "Book_ISBN" : "DeathlyH",
+    "Count" : 50
+}

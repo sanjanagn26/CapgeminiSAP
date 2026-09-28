@@ -1,0 +1,32 @@
+### Get all Products
+GET http://localhost:4004/odata/v4/catalog/ProductSrv
+
+### Count Products
+GET http://localhost:4004/odata/v4/catalog/ProductSrv/$count
+
+### Top 10 Products
+GET http://localhost:4004/odata/v4/catalog/ProductSrv?$top=10
+
+### Skip 10 and get next records
+GET http://localhost:4004/odata/v4/catalog/ProductSrv?$top=10&$skip=10
+
+### Filter Products
+GET http://localhost:4004/odata/v4/catalog/ProductSrv?$filter=CATEGORY eq 'Notebooks'
+
+### Select Specific Columns
+GET http://localhost:4004/odata/v4/catalog/ProductSrv?$select=PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+### Sort Descending by Product ID
+GET http://localhost:4004/odata/v4/catalog/ProductSrv?$orderby=PRODUCT_ID desc
+
+### Get Single Product
+GET http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')
+
+### Get Only Product ID Property
+GET http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID
+
+### Get Property Value
+GET http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID/$value
+
+### Expand Items from Purchase Orders
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv?$expand=Items

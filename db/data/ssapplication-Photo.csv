@@ -1,0 +1,5 @@
+ID,Album_ID,Location_ID,Member_ID,Title,Description,Privacy,UploadDate,View,ImagePath
+1,1,1,1,Cubbon Park,Morning walk photo,Public,2025-01-10,50,/images/cubbon.jpg
+2,1,2,1,Marina Beach,Sunset view,Public,2025-01-15,75,/images/marina.jpg
+3,2,1,2,Birthday Cake,Cake cutting ceremony,Private,2025-02-20,40,/images/cake.jpg
+4,3,3,3,Waterfall,Nature waterfall shot,Public,2025-03-05,100,/images/waterfall.jpg
